@@ -11,7 +11,7 @@ $ sudo apt install mplayer libnotify-bin
 # Installation
 
 ```
-$ pip install https://github.com/ymkim92/fuelprice/archive/master.zip
+$ pip install https://github.com/ymkim92/timer/archive/master.zip
 ```
 
 # Usage
