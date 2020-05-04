@@ -7,6 +7,8 @@ from subprocess import check_output, STDOUT
 import sys
 import time
 
+last_remained_time = ''
+
 def run_command(command, output_flag=True):
     output = check_output(command, stderr=STDOUT, shell=True)
     if output_flag:
@@ -48,12 +50,15 @@ def get_arguments():
     return parser.parse_args(sys.argv[1:])
 
 def main():
+    global last_remained_time
+
     args = get_arguments()
 
     timer = Timer(args.minutes)
     timer.start()
     while timer.is_time_off() == False:
-        print(timer.get_time_remaining_string() + '  ', end='\r', flush=True)
+        last_remained_time = timer.get_time_remaining_string()
+        print(last_remained_time + '  ', end='\r', flush=True)
         time.sleep(10)
 
     print(time.asctime(time.localtime(time.time())))
@@ -64,4 +69,7 @@ def main():
     run_local_command(command)
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        print("{}\nTimer stopped".format(last_remained_time))
