@@ -4,7 +4,7 @@ I have tested this in the Lubuntu 19.04 and Python 3.7.
 # Features
 - Print how many time is left
 - Play sound at the end of timer
-- Print system notification at the end of timer
+- Show up system notification at the end of timer
 
 # Requirements
 You need python3, mplayer and notify-send.
