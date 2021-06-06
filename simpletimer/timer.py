@@ -47,7 +47,7 @@ def get_arguments():
     parser.add_argument('minutes', type=int)
     return parser.parse_args(sys.argv[1:])
 
-def main():
+def pytimer():
     last_remained_time = ''
 
     args = get_arguments()
@@ -58,7 +58,7 @@ def main():
         while timer.is_time_off() == False:
             last_remained_time = timer.get_time_remaining_string()
             print(last_remained_time + '  ', end='\r', flush=True)
-            time.sleep(10)
+            time.sleep(1)
 
         print(time.asctime(time.localtime(time.time())))
         snd_complete = '/usr/share/sounds/freedesktop/stereo/complete.oga'
@@ -69,5 +69,5 @@ def main():
     except KeyboardInterrupt:
         print("{}\nTimer stopped".format(last_remained_time))
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     pytimer()

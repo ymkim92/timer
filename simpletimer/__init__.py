@@ -1,1 +1,1 @@
-from .timer import main
+from .timer import pytimer
