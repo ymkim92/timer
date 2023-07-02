@@ -23,7 +23,7 @@ def main():
     timer = Timer(args.minutes)
     timer.start()
     try:
-        while timer.is_time_off() is False:
+        while timer.is_time_expired() is False:
             last_remained_time = timer.get_time_remaining_string()
             print(f"{last_remained_time} ", end="\r", flush=True)
             time.sleep(1)
