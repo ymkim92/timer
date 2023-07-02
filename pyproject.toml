@@ -1,22 +1,19 @@
-[tool.poetry]
-name = "timer"
-version = "0.1.0"
-description = ""
-authors = ["Youngmin Kim <ymkim92@gmail.com>"]
-license = "MIT"
-
-packages = [
-    { include = "simpletimer" },
-]
-
-[tool.poetry.scripts]
-pytimer = "simpletimer.timer:pytimer"
-
-[tool.poetry.dependencies]
-python = "^3.7"
-
-[tool.poetry.dev-dependencies]
-
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytimer"
+version = "1.0.0"
+description = "simple timer that can specify the time as minutes"
+readme = "README.md"
+authors = [{ name = "Youngmin Kim", email = "ymkim92@gmail.com" }]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.7"
+
+[project.scripts]
+realpython = "pytimer.__main__:main"
