@@ -1,6 +1,5 @@
 This is very simple timer working in Linux.
 I have tested this in the Lubuntu 19.04 and Python 3.7.
-This project uses ``poetry``.
 
 # Features
 - Print how many time is left
