@@ -1,3 +1,4 @@
+- [ ] enable pytimer.__version__ by bumpver
 - [ ] remove linux dependency - notification (playsound)
 - [ ] next project: interval timer for workout 
 
